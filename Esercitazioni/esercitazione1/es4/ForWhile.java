@@ -1,4 +1,4 @@
-public class forWhile{
+public class ForWhile{
     public static void main(String args[]){
 
         //ciclo for che somma i numeri da 50 a 100
