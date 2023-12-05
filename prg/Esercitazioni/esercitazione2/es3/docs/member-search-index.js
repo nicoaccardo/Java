@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"<Unnamed>","c":"Rettangolo","l":"area()"},{"p":"<Unnamed>","c":"TestRettangolo","l":"main(String[])","url":"main(java.lang.String[])"},{"p":"<Unnamed>","c":"Rettangolo","l":"perimetro()"},{"p":"<Unnamed>","c":"Rettangolo","l":"Rettangolo()","url":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"TestRettangolo","l":"TestRettangolo()","url":"%3Cinit%3E()"}]
