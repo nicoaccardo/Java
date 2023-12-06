@@ -1,11 +1,11 @@
 package prg.Esercitazioni.esercitazione3.es3;
 public class Calcolatrice{
 
-    double[] generaVettore(int Lunghezza){
+    double[] generaVettore(int lunghezza){
 
-        double[] vettore = new double[Lunghezza];
+        double[] vettore = new double[lunghezza];
 
-        for(int i=0; i<Lunghezza; i++){
+        for(int i=0; i<lunghezza; i++){
             vettore[i]=(Math.random()*1000);
         }
 
