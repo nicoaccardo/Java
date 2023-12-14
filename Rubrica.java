@@ -2,7 +2,7 @@ package prg.Esercitazioni.esercitazione4.es4;
 import prg.Esercitazioni.esercitazione3.es6.Persona;
 import java.util.ArrayList;
 import java.util.Scanner;
-public class ProgrammaInterattivoV2{
+public class Rubrica{
     public static void main(String args[]){
 
         ArrayList<Persona> lista = new ArrayList<>();
