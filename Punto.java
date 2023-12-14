@@ -5,6 +5,10 @@ public class Punto{
     private double x;
     private double y;
 
+    public Punto() {
+        this(0, 0);
+    }
+    
     public Punto(double x, double y){
         this.setX(x);
         this.setY(y);
