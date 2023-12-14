@@ -25,7 +25,9 @@ public class Punto{
     }
 
     public double distanza(Punto b){
-        return Math.hypot(Math.abs(this.x - b.getX()), Math.abs(this.y - b.getY()));
+        double coordinataX = this.x - b.getX();
+        double coordinataY = this.y - b.getY();
+        return Math.hypot(coordinataX, coordinataY);
     }
 
     public boolean equals(Punto b){
