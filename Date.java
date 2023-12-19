@@ -58,9 +58,9 @@ public class Date{
             setNomeMese(mesi[mese-1]);
         }
     }
-    // public int getMese(){
-    //     return this.mese;
-    // }
+    public int getMese(){
+        return this.mese;
+    }
 
     public void setNomeMese(String mese){
         for(int i = 0; i < mesi.length; i++){
