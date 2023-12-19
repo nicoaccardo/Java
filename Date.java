@@ -105,4 +105,13 @@ public class Date{
             this.setMese(1); 
         }
     }
+
+    public boolean equals(Date d){
+        if((this.getGiorno() == d.getGiorno()) && (this.getNomeMese().equals(d.getNomeMese())) && (this.getAnno() == d.getAnno())){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
