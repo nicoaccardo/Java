@@ -2,60 +2,58 @@ package prg.Esercitazioni.esercitazione6.es4;
 
 // Rappresenta una retta nella forma y = mx + q
 public class Line {
-    public static void main(String args[]){
 
-        private Point2D firstPoint = new Point2D();
-        private Point2D secondPoint = new Point2D();
-        private double angularCoefficient;
-        private double q;
+    private Point2D firstPoint = new Point2D();
+    private Point2D secondPoint = new Point2D();
+    private double angularCoefficient;
+    private double q;
 
-        public Line(){}
+    public Line(){}
 
-        public Line(double firstPointX, double firstPointY, double secondPointX, double secondPointY){
-            this.firstPoint.setX(firstPointX);
-            this.firstPoint.setY(firstPointY);
+    public Line(double firstPointX, double firstPointY, double secondPointX, double secondPointY){
+        this.firstPoint.setX(firstPointX);
+        this.firstPoint.setY(firstPointY);
 
-            this.secondPoint.setX(secondPointX);
-            this.secondPoint.setY(secondPointY);
+        this.secondPoint.setX(secondPointX);
+        this.secondPoint.setY(secondPointY);
 
-            setAngularCoefficient();
-            setQ();
+        setAngularCoefficient();
+        setQ();
+    }
+
+    private void setAngularCoefficient(){
+        double deltaX = secondPoint.getX() - firstPoint.getX();
+        double deltaY = secondPoint.getY() - firstPoint.getY();
+
+        if(deltaX == 0){
+            angularCoefficient = Double.NaN;
+        } else {
+            angularCoefficient = deltaY/deltaX;
         }
+    }
 
-        private void setAngularCoefficient(){
-            double deltaX = secondPoint.getX() - firstPoint.getX();
-            double deltaY = secondPoint.getY() - firstPoint.getY();
+    public double getAngularCoefficient(){
+        return this.angularCoefficient;
+    }
 
-            if(deltaX == 0){
-                angularCoefficient = Double.Nan;
-            } else {
-                angularCoefficient = deltaY/deltaX;
-            }
-        }
+    private void setQ() {
+        this.q = secondPoint.getY() - angularCoefficient * secondPoint.getX(); 
+    }
 
-        public double getAngularCoefficient(){
-            return this.angularCoefficient;
-        }
+    public double getQ(){
+        return this.q;
+    }
 
-        private void setQ() {
-		    this.q = secondPoint.getY() - angularCoefficient * secondPoint.getX(); 
-	    }
-
-        public double getQ(){
-            return this.q;
-        }
-
-        public String toString() {
-		
-		if (Double.isNaN(angularCoefficient)) {
-			return "x = " + firstPoint.getX();
-		}
-		
-		if (angularCoefficient == 0) {
-			return "y = " + this.getQ();
-		}
-		
-		return "y = " + this.getAngularCoefficient() + "x + " + this.getQ();
-	}
+    public String toString() {
+    
+    if (Double.isNaN(angularCoefficient)) {
+        return "x = " + firstPoint.getX();
+    }
+    
+    if (angularCoefficient == 0) {
+        return "y = " + this.getQ();
+    }
+    
+    return "y = " + this.getAngularCoefficient() + "x + " + this.getQ();
     }
 }
