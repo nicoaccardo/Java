@@ -43,14 +43,10 @@ public class IntegerSet{
     //insertElement inserisce un nuovo intero k nell'insieme (imposta a[k] a true)
     public void insertElement(int... k) {
         for(int tmp : k){
-            try {
-                if(this.set[tmp]==true){
-                    System.out.println("L'intero " +tmp+ " è già presente nell'insieme");
-                } else {
-                    this.set[tmp] = true;
-                }
-            } catch (ArrayIndexOutOfBoundsException exc) {
-                System.out.println("Errore: l'intero deve essere compreso tra 0 e 99");
+            if(this.set[tmp]==true){
+                System.out.println("L'intero " +tmp+ " è già presente nell'insieme");
+            } else {
+                this.set[tmp] = true;
             }
         }
     }

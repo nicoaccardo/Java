@@ -9,7 +9,11 @@ public class TestIntegerSet{
         System.out.println(set1);
         System.out.println(set2);
 
-        set1.insertElement(100);
+        try{
+            set1.insertElement(100);
+        } catch (ArrayIndexOutOfBoundsException exc){
+            System.out.println("Errore: l'intero deve essere compreso tra 0 e 99");
+        }
         System.out.println(set1);
 
         IntegerSet unionSet = set1.unionOfIntegerSet(set2);
