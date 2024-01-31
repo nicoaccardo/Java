@@ -14,7 +14,12 @@ public class Razionali{
     }
 
     public void setDenominatore(int denominatore){
-        this.denominatore = denominatore;
+        if(denominatore!=0){
+            this.denominatore = denominatore;
+        } else {
+            this.denominatore = 1;
+            throw new IllegalArgumentException();
+        }
     }
 
     public int getNumeratore(){
@@ -53,6 +58,9 @@ public class Razionali{
     public static Razionali quoziente(Razionali n1, Razionali n2){
         int numeratoreQuoziente = n1.getNumeratore() * n2.getDenominatore();
         int denominatoreQuoziente = n1.getDenominatore() * n2.getNumeratore();
+        if(denominatoreQuoziente==0){
+            throw new ArithmeticException();
+        }
         Razionali razionaleQuoziente = new Razionali(numeratoreQuoziente, denominatoreQuoziente);
         return razionaleQuoziente;
     }
